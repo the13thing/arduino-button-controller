@@ -13,22 +13,22 @@ int button1LastState = 0;
 int button2State = 1;
 int button2LastState = 0;
 
-int button3State = 0;
+int button3State = 1;
 int button3LastState = 0;
 
-int button4State = 0;
+int button4State = 1;
 int button4LastState = 0;
 
-int button5State = 0;
+int button5State = 1;
 int button5LastState = 0;
 
-int button6State = 0;
+int button6State = 1;
 int button6LastState = 0;
 
-int button7State = 0;
+int button7State = 1;
 int button7LastState = 0;
 
-int button8State = 0;
+int button8State = 1;
 int button8LastState = 0;
 
 
@@ -56,7 +56,7 @@ void loop() {
   button8State = digitalRead(button8);
   //1
   if (button1State != button1LastState && button1State == LOW) {
-    Serial.println(0);
+    Serial.println("A");
     button1LastState = button1State;
   }
   else {
@@ -64,7 +64,7 @@ void loop() {
   }
   //2
   if (button2State != button2LastState && button2State == LOW) {
-    Serial.println(1);
+    Serial.println("B");
     button2LastState = button2State;
   }
   else {
@@ -72,7 +72,7 @@ void loop() {
   }
   //3
   if (button3State != button3LastState && button3State == LOW) {
-    Serial.println(2);
+    Serial.println("C");
     button3LastState = button3State;
   }
   else {
@@ -80,7 +80,7 @@ void loop() {
   }
   //4
   if (button4State != button4LastState && button4State == LOW) {
-    Serial.println(3);
+    Serial.println("D");
     button4LastState = button4State;
   }
   else {
@@ -88,7 +88,7 @@ void loop() {
   }
   //5
   if (button5State != button5LastState && button5State == LOW) {
-    Serial.println(4);
+    Serial.println("E");
     button5LastState = button5State;
   }
   else {
@@ -96,15 +96,16 @@ void loop() {
   }
   //6
   if (button6State != button6LastState && button6State == LOW) {
-    Serial.println(5);
+    Serial.println("H");
     button6LastState = button6State;
   }
   else {
     button6LastState = button6State;
   }
+
   //7
   if (button7State != button7LastState && button7State == LOW) {
-    Serial.println(6);
+    Serial.println("F");
     button7LastState = button7State;
   }
   else {
@@ -112,12 +113,12 @@ void loop() {
   }
   //8
   if (button8State != button8LastState && button8State == LOW) {
-    Serial.println(7);
+    Serial.println("G");
     button8LastState = button8State;
   }
   else {
     button8LastState = button8State;
   }
 
-  delay(100);
+  delay(10);
 }
